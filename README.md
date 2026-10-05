@@ -1,4 +1,41 @@
+# React Context és Provider lépésről lépésre
+Ebben az útmutatóban egy egyszerűTtodo alkalamzás közös állapotát tesszük elérhetővé több komponens számára a React Context API segítségével.
 
+A Contexten keresztül a következő értékeket adjuk tovább:
+
+- a tennivalók listáját;
+- a listát módosítő függvényt;
+
+## Kiindulás
+
+Felépítünk egy alap TODO alkalmazást úgy, ahogy eddig is tanultuk, az App komponensben kezelt állapottal. Az állapotokat props-okkal adjuk át a gyerekelemeknek. 
+
+
+## Javasolt fájlszerkezet
+
+```text
+src/
+├── components/
+│   └── Todos.tsx
+│   └── Todo.tsx
+├── adat.ts
+├── App.css
+├── App.tsx
+└── main.tsx
+```
+
+
+
+
+### Fogalmak
+
+A Provider jelentése: „értéket biztosító komponens”. A React Context esetében a Provider határozza meg, hogy a komponensfa egy adott részében milyen Context-érték legyen elérhető. Dinamikus, közösen módosítható állapot továbbítására használjuk.
+
+### Context és Provider szerepe
+
+A Context definiálja az adatcsatornát és az átadható érték típusát.
+A Provider megadja az adatcsatornán ténylegesen továbbított értéket.
+A useContext kiolvassa a legközelebbi Provider értékét.
 
 
 ## Context - Provider alapszerkezet

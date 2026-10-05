@@ -1,16 +1,32 @@
 .todo {
-    display:flex;
-    text-align: left;
-    padding: 0vw 2vw;
-    gap: 5px;
+  display: flex;
+  text-align: left;
+  padding: 0vw 2vw;
+  gap: 5px;
 }
 .todo span {
-    min-width: 200px;
-    flex: 1 1 200px;
+  min-width: 200px;
+  flex: 1 1 200px;
 }
 .todo button {
-    border-radius: 5px;
-    padding: 3px;
-    margin:0;
-    
+  border-radius: 5px;
+  padding: 3px;
+  margin: 0;
+}
+.kesz {
+  color: green;
+}
+.folyamatban {
+  color: rgb(0, 47, 128);
+  font-weight: bold;
+}
+
+.torol {
+  color: rgb(144, 146, 149);
+  text-decoration: line-through;
+}
+
+.alap {
+  color: rgb(138, 11, 17);
+  font-weight: bold;
 }

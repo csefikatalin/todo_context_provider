@@ -7,24 +7,14 @@ interface TodosPropsTipus {
 }
 
 function Todos({ todoLista }: TodosPropsTipus) {
-
-
-
     return (
         <div>
-
             {
-
                 todoLista.map((e, i) => {
                     return <Todo elem={e} index={i} key={i} />
-
                 }
-
                 )
             }
-
-
-
         </div>
     )
 }

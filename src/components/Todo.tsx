@@ -9,10 +9,7 @@ interface TodoPropsTipus {
     elem: TodoTipus,
     index: number
 }
-function Todo({ elem, index }: TodoPropsTipus) {
-
- 
-    
+function Todo({ elem, index }: TodoPropsTipus) {    
       const { allapotKezelo } = useTodoContext();
 
     return (

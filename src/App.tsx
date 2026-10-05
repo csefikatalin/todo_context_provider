@@ -1,25 +1,23 @@
-import { useState } from 'react'
 
 import './App.css'
-import { TODOLISTA, type AllapotTipus, type TodoTipus } from './adat'
 import Todos from './components/Todos'
+import {  useTodoContext } from './contexts/TodoContext'
 
 function App() {
-  const [todoLista, setTodoLista] = useState<TodoTipus[]>(TODOLISTA)
 
-  function allapotKezelo(index: number, allapot: AllapotTipus) {
-    console.log(index, allapot)
-    const ujTodoLista: TodoTipus[] = [...todoLista]
-    ujTodoLista[index].allapot = allapot
-    setTodoLista(ujTodoLista)
-  }
+  
+
+  const { todoLista } =  useTodoContext();;
+
+
+  /* const {todoLista} = useContext(TodoContext) */
   return (
     <>
       <header>
         <h1>Todo</h1>
       </header>
       <article>
-        <Todos todoLista={todoLista} allapotKezelo={allapotKezelo} />
+        <Todos todoLista={todoLista} />
       </article>
       <footer>
         <p>Készítette: Cs. K. </p>

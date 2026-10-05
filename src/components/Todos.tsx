@@ -1,19 +1,22 @@
 
 import Todo from './Todo'
-import type { AllapotTipus, TodoTipus } from '../adat'
+import type {  TodoTipus } from '../adat'
 interface TodosPropsTipus {
-     allapotKezelo: (index: number,allapot:AllapotTipus) => void,
+
     todoLista: TodoTipus[]
 }
 
-function Todos({ allapotKezelo, todoLista }: TodosPropsTipus) {
+function Todos({ todoLista }: TodosPropsTipus) {
+
+
+
     return (
         <div>
 
             {
 
                 todoLista.map((e, i) => {
-                    return <Todo elem={e} index={i} allapotKezelo={allapotKezelo} key={i} />
+                    return <Todo elem={e} index={i} key={i} />
 
                 }
 

@@ -1,13 +1,20 @@
 import "./todo.css"
-import type { AllapotTipus, TodoTipus } from '../adat'
+import type {  TodoTipus } from '../adat'
+
+import {  useTodoContext } from "../contexts/TodoContext";
 
 
 interface TodoPropsTipus {
-    allapotKezelo: (index: number,allapot:AllapotTipus) => void,
+   
     elem: TodoTipus,
     index: number
 }
-function Todo({ elem, allapotKezelo, index }: TodoPropsTipus) {
+function Todo({ elem, index }: TodoPropsTipus) {
+
+ 
+    
+      const { allapotKezelo } = useTodoContext();
+
     return (
         <div className='todo'>
             <span className="szoveg">{elem.tennivalo} </span>

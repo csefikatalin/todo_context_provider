@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base:"todo_context_provider",
   plugins: [
     react(),
     babel({ presets: [reactCompilerPreset()] })
